@@ -5,7 +5,7 @@ import com.leotosin.thedicegame.model.Dice
 
 class MainViewModel : ViewModel()
 {
-    fun getDiceValue() :Int?
+    fun getDiceValue() :Int
     {
         val dice = Dice()
 
