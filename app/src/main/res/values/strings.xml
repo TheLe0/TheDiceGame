@@ -3,4 +3,8 @@
     <string name="casino">Cassino logo</string>
     <string name="fixes">fixes</string>
     <string name="cards">cards</string>
+    <string name="roll">Roll</string>
+    <string name="dice_one">Dice One</string>
+    <string name="dice_two">Dice Two</string>
+    <string name="coins">coins</string>
 </resources>
