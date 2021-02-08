@@ -1,5 +1,7 @@
 # TheDiceGame
 
+![Android CI](https://github.com/TheLe0/TheDiceGame/workflows/Android%20CI/badge.svg)
+
 🎲 A roll dices games 🎰
 
 ## Introduction ##
