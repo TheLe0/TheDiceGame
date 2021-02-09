@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Dices</string>
-    <string name="casino">Cassino logo</string>
+    <string name="app_name_br">Dados virtuais</string>
+    <string name="casino">Casino logo</string>
     <string name="fixes">fixes</string>
     <string name="cards">cards</string>
     <string name="roll">Roll</string>
