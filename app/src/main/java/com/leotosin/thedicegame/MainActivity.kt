@@ -1,6 +1,5 @@
 package com.leotosin.thedicegame
 
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
