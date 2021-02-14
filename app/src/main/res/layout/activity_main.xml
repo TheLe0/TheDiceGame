@@ -27,6 +27,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_num_of_dices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/numberOfDices"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/spin_num_of_dices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:popupBackground="@color/darkGreen"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:orientation="horizontal">
 
@@ -45,19 +69,6 @@
             android:layout_weight="1"
             android:contentDescription="@string/dice_two"
             app:srcCompat="@drawable/dice_1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:id="@+id/spin_num_of_dices"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
 
     </LinearLayout>
 

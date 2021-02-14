@@ -12,4 +12,9 @@ class MainViewModel : ViewModel()
         return dice.value
     }
 
+    fun numberOfDices() :List<String>
+    {
+        return arrayListOf("2", "1")
+    }
+
 }

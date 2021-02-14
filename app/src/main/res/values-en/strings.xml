@@ -8,4 +8,5 @@
     <string name="dice_one">Dice One</string>
     <string name="dice_two">Dice Two</string>
     <string name="coins">coins</string>
+    <string name="numberOfDices">Number of Dices</string>
 </resources>

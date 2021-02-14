@@ -8,4 +8,5 @@
     <string name="dice_one">Primeiro Dado</string>
     <string name="dice_two">Segundo Dado</string>
     <string name="coins">Moedas</string>
+    <string name="numberOfDices">Número de Dados</string>
 </resources>
