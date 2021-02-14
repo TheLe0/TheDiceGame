@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dados Virtuais</string>
+    <string name="casino">Cassino logo</string>
+    <string name="fixes">fichas</string>
+    <string name="cards">cartas</string>
+    <string name="roll">Rolar</string>
+    <string name="dice_one">Primeiro Dado</string>
+    <string name="dice_two">Segundo Dado</string>
+    <string name="coins">Moedas</string>
+</resources>
