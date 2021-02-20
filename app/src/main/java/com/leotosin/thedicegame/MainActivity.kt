@@ -1,5 +1,6 @@
 package com.leotosin.thedicegame
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -55,6 +56,10 @@ class MainActivity : AppCompatActivity() {
 
     fun rollDices(view : View)
     {
+        this.playSound()
+
+        Thread.sleep(NumberUtil.SOUND_WAIT)
+
         if (view.id == R.id.btn_roll)
         {
             val diceOne :ImageView = findViewById(R.id.ic_dice_one)
@@ -94,5 +99,16 @@ class MainActivity : AppCompatActivity() {
 
         val numberOfDices : Spinner = findViewById(R.id.spin_num_of_dices)
         numberOfDices.adapter = adapter
+    }
+
+    private fun playSound()
+    {
+        val sound : MediaPlayer = MediaPlayer.create(this, R.raw.sound)
+
+        sound.setOnCompletionListener {
+            it.release()
+        }
+
+        sound.start()
     }
 }
