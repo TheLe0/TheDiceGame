@@ -96,7 +96,6 @@
             android:clickable="true"
             app:srcCompat="@android:drawable/ic_media_play"
             android:contentDescription="@string/roll"
-            android:onClick="rollDices"
             android:focusable="true" />
     </LinearLayout>
 

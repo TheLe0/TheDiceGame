@@ -4,13 +4,21 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.*
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 import com.leotosin.thedicegame.util.NumberUtil
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewModel: MainViewModel
+    private lateinit var diceOne :ImageView
+    private lateinit var diceTwo :ImageView
+    private var dices :Int = NumberUtil.TWO_DICE
+    private lateinit var button :FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
@@ -20,10 +28,22 @@ class MainActivity : AppCompatActivity() {
 
         this.populateSpinner()
 
+        diceOne = findViewById(R.id.ic_dice_one)
+        diceTwo = findViewById(R.id.ic_dice_two)
+        button = findViewById(R.id.btn_roll)
+
+        button.setOnClickListener {
+            if (it.id == R.id.btn_roll)
+            {
+                button.isEnabled = false
+                this.rollDices()
+                button.isEnabled = true
+            }
+        }
+
         val numberOfDices : Spinner = findViewById(R.id.spin_num_of_dices)
         numberOfDices.onItemSelectedListener = object : AdapterView.OnItemSelectedListener
         {
-            val button : FloatingActionButton = findViewById(R.id.btn_roll)
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long)
             {
@@ -34,10 +54,12 @@ class MainActivity : AppCompatActivity() {
                 {
                     NumberUtil.ONE_DICE ->
                     {
+                        dices = NumberUtil.ONE_DICE
                         dice.visibility = View.GONE
                     }
                     NumberUtil.TWO_DICE ->
                     {
+                        dices = NumberUtil.TWO_DICE
                         dice.visibility = View.VISIBLE
                     }
                 }
@@ -54,36 +76,35 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun rollDices(view : View)
+    private fun rollDices()
     {
         this.playSound()
 
         Thread.sleep(NumberUtil.SOUND_WAIT)
 
-        if (view.id == R.id.btn_roll)
+        this.nextDiceValue()
+    }
+
+    private fun nextDiceValue()
+    {
+        when (viewModel.getDiceValue())
         {
-            val diceOne :ImageView = findViewById(R.id.ic_dice_one)
-            val diceTwo : ImageView = findViewById(R.id.ic_dice_two)
+            1 -> diceOne.setImageResource(R.drawable.dice_1)
+            2 -> diceOne.setImageResource(R.drawable.dice_2)
+            3 -> diceOne.setImageResource(R.drawable.dice_3)
+            4 -> diceOne.setImageResource(R.drawable.dice_4)
+            5 -> diceOne.setImageResource(R.drawable.dice_5)
+            6 -> diceOne.setImageResource(R.drawable.dice_6)
+        }
 
-            when (viewModel.getDiceValue())
-            {
-                1 -> diceOne.setImageResource(R.drawable.dice_1)
-                2 -> diceOne.setImageResource(R.drawable.dice_2)
-                3 -> diceOne.setImageResource(R.drawable.dice_3)
-                4 -> diceOne.setImageResource(R.drawable.dice_4)
-                5 -> diceOne.setImageResource(R.drawable.dice_5)
-                6 -> diceOne.setImageResource(R.drawable.dice_6)
-            }
-
-            when (viewModel.getDiceValue())
-            {
-                1 -> diceTwo.setImageResource(R.drawable.dice_1)
-                2 -> diceTwo.setImageResource(R.drawable.dice_2)
-                3 -> diceTwo.setImageResource(R.drawable.dice_3)
-                4 -> diceTwo.setImageResource(R.drawable.dice_4)
-                5 -> diceTwo.setImageResource(R.drawable.dice_5)
-                6 -> diceTwo.setImageResource(R.drawable.dice_6)
-            }
+        when (viewModel.getDiceValue())
+        {
+            1 -> diceTwo.setImageResource(R.drawable.dice_1)
+            2 -> diceTwo.setImageResource(R.drawable.dice_2)
+            3 -> diceTwo.setImageResource(R.drawable.dice_3)
+            4 -> diceTwo.setImageResource(R.drawable.dice_4)
+            5 -> diceTwo.setImageResource(R.drawable.dice_5)
+            6 -> diceTwo.setImageResource(R.drawable.dice_6)
         }
     }
 
