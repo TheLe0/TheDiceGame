@@ -35,9 +35,9 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             if (it.id == R.id.btn_roll)
             {
-                button.isEnabled = false
+                this.playSound()
+                this.shakeDices()
                 this.rollDices()
-                button.isEnabled = true
             }
         }
 
@@ -74,6 +74,31 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    private fun shakeDices() {
+        val animationOne: Animation = AnimationUtils.loadAnimation(this, R.anim.shake)
+
+        val listener :Animation.AnimationListener = (object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation?) { }
+
+            override fun onAnimationEnd(animation: Animation?) { }
+
+            override fun onAnimationRepeat(animation: Animation?) { }
+        })
+
+        animationOne.setAnimationListener(listener)
+
+        diceOne.startAnimation(animationOne)
+
+        if (dices > NumberUtil.ONE_DICE)
+        {
+            val animationTwo: Animation = AnimationUtils.loadAnimation(this, R.anim.shake)
+
+            animationTwo.setAnimationListener(listener)
+
+            diceTwo.startAnimation(animationTwo)
+        }
     }
 
     private fun rollDices()
