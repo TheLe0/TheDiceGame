@@ -8,8 +8,6 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.*
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-
 import com.leotosin.thedicegame.util.NumberUtil
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var diceOne :ImageView
     private lateinit var diceTwo :ImageView
     private var dices :Int = NumberUtil.TWO_DICE
-    private lateinit var button :FloatingActionButton
+    private lateinit var button :Button
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
