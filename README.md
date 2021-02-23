@@ -6,7 +6,9 @@
 
 ## Introduction ##
 
-![One Dice](./imgs/print_one_dice.png) ![Two Dices](./imgs/print_two_dices.png)
+![Landscape](./imgs/print_1.png) 
+![One Dice](./imgs/print_2.png) 
+![Two Dices](./imgs/print_3.png)
 
 Note: In the prints the texts are in pt-br, but the app support en-US too.
 
