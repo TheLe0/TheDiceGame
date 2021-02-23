@@ -6,7 +6,11 @@
 
 ## Introduction ##
 
-![Landscape](./imgs/print_1.png) 
+![Landscape One Dice](./imgs/landscape_1.png)
+![Landscape Two Dices](./imgs/landscape_1.png)
+![Portrait One Dice](./imgs/portrait_1.png)
+![Portrait Two Dices](./imgs/portrait_2.png)
+
 ![One Dice](./imgs/print_2.png) 
 ![Two Dices](./imgs/print_3.png)
 
