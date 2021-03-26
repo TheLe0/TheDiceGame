@@ -7,7 +7,7 @@
 ## Introduction ##
 
 ![Landscape One Dice](./imgs/landscape_1.png)
-![Landscape Two Dices](./imgs/landscape_1.png)
+![Landscape Two Dices](./imgs/landscape_2.png)
 ![Portrait One Dice](./imgs/portrait_1.png)
 ![Portrait Two Dices](./imgs/portrait_2.png)
 
